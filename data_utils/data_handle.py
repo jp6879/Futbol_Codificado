@@ -16,11 +16,11 @@ def data_loader() -> Tuple[pd.DataFrame, pd.DataFrame]:
     """
 
     # Cargamos los datos de los DataFrames de los equipos locales y visitantes.
-    # df_local = pd.read_csv('../data/Local.csv')
-    # df_visitante = pd.read_csv('/Visitante.csv')
+    df_local = pd.read_csv('../data/Local.csv')
+    df_visitante = pd.read_csv('/Visitante.csv')
 
-    df_local = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Local.csv'), low_memory=False)
-    df_visitante = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Visitante.csv'), low_memory=False)
+    # df_local = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Local.csv'), low_memory=False)
+    # df_visitante = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Visitante.csv'), low_memory=False)
 
     df_local, df_visitante = clean_data(df_local, df_visitante)
     
@@ -76,7 +76,7 @@ def clean_data(df_local : pd.DataFrame, df_visitante : pd.DataFrame) -> Tuple[pd
     return df_local, df_visitante
 
 # Función auxiliar max min scale para normalizar los datos.
-def max_min_scale(arr):
+def max_min_scale(arr : np.array) -> np.array:
     """Función que normaliza los datos de un array.
         Args:
             arr (np.array): array de datos a normalizar.
