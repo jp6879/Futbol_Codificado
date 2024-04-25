@@ -81,7 +81,7 @@ def VideoRef(t1 : float, t2: float) -> None:
                     r"$Vis$/"
                     f" Laterales: {laterales} Corners: {corners}")
 
-        # Actualizamos las posiciones de los jugadores y la pelota.
+        # Actualizamos las posiciones de los jugadores y la pelota. Un poco magica esta función pero anda
         scatter_locales.set_offsets(np.array([[x_locales, y_locales]]).T)
         scatter_visitantes.set_offsets(np.array([[x_visitantes, y_visitantes]]).T)
         scatter_pelota.set_offsets(np.array([x_pelota, y_pelota]))

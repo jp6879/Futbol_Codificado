@@ -50,7 +50,7 @@ if __name__ == "__main__":
     n = int(60-len(titulo)//2)
     print("*"*n + titulo + "*"*n)
     goles_local, goles_visitante, laterales, corners = estadisticas_generales()
-    print(f"El equipo local hizo {goles_local} goles, el equipo visitante hizp {goles_visitante} goles, se cobraron {laterales} laterales y {corners} corners")
+    print(f"El equipo local hizo {goles_local} goles, el equipo visitante hizo {goles_visitante} goles, se cobraron {laterales} laterales y {corners} corners")
 
     print("")
 
