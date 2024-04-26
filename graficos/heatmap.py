@@ -42,7 +42,7 @@ def heatmap(player_name : str) -> None:
         jugador_y = df_visitante[player_name + 'y'].dropna().values * 68
 
     # Calculamos el histograma 2D.
-    hist, _, _ = np.histogram2d(jugador_x, jugador_y, bins=[105, 68], range=[[0, 105], [0, 68]]) # Pongo los mismos bins que la cancha
+    hist, _, _ = np.histogram2d(jugador_x, jugador_y, bins=[105, 68], range=[[0, 105], [0, 68]]) # Pongo los mismos bins que las dimensiones de la cancha.
 
     # Para graficar con seaborn paso a un DataFrame
     hist_df = pd.DataFrame(hist.T.tolist())
@@ -51,7 +51,6 @@ def heatmap(player_name : str) -> None:
     for col in hist_df.columns:
         hist_df[col] = max_min_scale(hist_df[col])
 
-    fig, ax = draw_field()
     sns.heatmap(hist_df, cmap='hot', alpha = 0.5, annot = False, cbar = False ,ax=ax)
     ax.set_title(f"Mapa de calor del {player_name}")
     plt.show()

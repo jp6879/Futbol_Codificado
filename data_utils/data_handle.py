@@ -16,12 +16,13 @@ def data_loader() -> Tuple[pd.DataFrame, pd.DataFrame]:
     """
 
     # Cargamos los datos de los DataFrames de los equipos locales y visitantes.
-    # df_local = pd.read_csv('../data/Local.csv')
-    # df_visitante = pd.read_csv('/Visitante.csv')
+    df_local = pd.read_csv('../data/Local.csv')
+    df_visitante = pd.read_csv('/Visitante.csv')
 
-    df_local = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Local.csv'), low_memory=False)
-    df_visitante = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Visitante.csv'), low_memory=False)
+    # df_local = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Local.csv'), low_memory=False)
+    # df_visitante = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Visitante.csv'), low_memory=False)
 
+    # Limpiamos las primeras filas del DataFrame y renombramos las columnas.
     df_local, df_visitante = clean_data(df_local, df_visitante)
     
     return df_local, df_visitante
