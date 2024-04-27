@@ -22,9 +22,6 @@ def data_loader() -> Tuple[pd.DataFrame, pd.DataFrame]:
     df_local = pd.read_csv(path_local, low_memory=False)
     df_visitante = pd.read_csv(path_vistante, low_memory=False)
 
-    # df_local = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Local.csv'), low_memory=False)
-    # df_visitante = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Visitante.csv'), low_memory=False)
-
     # Limpiamos las primeras filas del DataFrame y renombramos las columnas.
     df_local, df_visitante = clean_data(df_local, df_visitante)
     

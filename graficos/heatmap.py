@@ -25,9 +25,9 @@ def heatmap(player_name : str) -> None:
     visitantes = ["Jugador15", "Jugador16", "Jugador17", "Jugador18", "Jugador19", "Jugador20", "Jugador21", "Jugador22", "Jugador23", "Jugador24", "Jugador25", "Jugador26", "Jugador27", "Jugador28"]
 
     total_jugadores = np.concatenate((locales, visitantes))
-
+    
     if not player_name in total_jugadores:
-        raise ValueError(f"El jugador {player_name} tiene que estar en lista de jugadores")
+        raise ValueError
     
     # Creamos la figura y el eje.
     fig, ax = draw_field()

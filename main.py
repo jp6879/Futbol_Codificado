@@ -29,12 +29,13 @@ if __name__ == "__main__":
     n = int(60-len(titulo)//2)
     print("*"*n + titulo + "*"*n)
     print("Ingrese el número de un jugador entre 1 y 28")
+    
     try:
         int_jugador = int(input("Número de jugador: "))
         jugador = "Jugador" + str(int_jugador)
         heatmap(jugador)
     except ValueError:
-        print("Ingrese un número válido")
+        print("El numero del jugador debe ser un entero entre 1 y 28")
     
     print("")
 
