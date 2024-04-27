@@ -144,7 +144,6 @@ def VideoRef(t1 : float, t2: float) -> None:
                 if (df_local["Pelotax"][t+2:t+30].isna().sum() != 0):
                     laterales += 1
             if y_rel > 1 and y_rel_anterior <= 1 and (y_rel_posterior > 1 or math.isnan(y_rel_posterior)):
-                # if math.isnan(df_local["Pelotax"][t:t+5].any()):
                 if(df_local["Pelotax"][t+2:t+30].isna().sum() != 0):
                     laterales += 1
 

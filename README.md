@@ -11,6 +11,7 @@
 
   1. Se crea el grafico de la cancha de futbol que representa adecuadamente las dimensiones reales del mismo.
   2. VideoRef: Dados dos tiempos $t_1$ y $t_2$, crea una animación del juego entre esos dos tiempos, representada sobre el campo de juego graficado en 1. La animación distingue entre los dos equipos y la pelota.
+  3. Avisa de los cambios de jugadores que se producen en el partido.
   3. Dado un jugador a elección, se grafica el mapa de calor del mismo a lo largo del partido.
   4. Se encuentra el jugador mas rápido del partido y su velocidad promedio.
   5. Se determinan cuantos goles, corners y laterales se cobraron
