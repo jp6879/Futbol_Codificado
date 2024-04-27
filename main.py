@@ -42,7 +42,7 @@ if __name__ == "__main__":
     n = int(60-len(titulo)//2)
     print("*"*n + titulo + "*"*n)
     velocidad, jugador_mas_veloz = encuentra_mas_veloz()
-    print(f"El jugador más veloz del partido fue {jugador_mas_veloz} con una velocidad media de {velocidad} m/s")
+    print(f"El jugador más veloz del partido fue {jugador_mas_veloz} con una velocidad media de {velocidad:.2f} m/s")
 
     print("")
 
@@ -58,4 +58,4 @@ if __name__ == "__main__":
     n = int(60-len(titulo)//2)
     print("*"*n + titulo + "*"*n)
     tiempo_jugado, tiempo_no_jugado = tiempo_neto()
-    print(f"El tiempo neto jugado en el partido fue de {tiempo_jugado} minutos y el tiempo no jugado fue de {tiempo_no_jugado} minutos")
+    print(f"El tiempo neto jugado en el partido fue de {tiempo_jugado:.2f} minutos y el tiempo no jugado fue de {tiempo_no_jugado:.2f} minutos")

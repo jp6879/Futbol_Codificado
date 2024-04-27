@@ -16,8 +16,11 @@ def data_loader() -> Tuple[pd.DataFrame, pd.DataFrame]:
     """
 
     # Cargamos los datos de los DataFrames de los equipos locales y visitantes.
-    df_local = pd.read_csv('../data/Local.csv')
-    df_visitante = pd.read_csv('../data/Visitante.csv')
+    path_local = os.path.join(os.getcwd(), 'data', 'Local.csv')
+    path_vistante = os.path.join(os.getcwd(), 'data', 'Visitante.csv')
+
+    df_local = pd.read_csv(path_local, low_memory=False)
+    df_visitante = pd.read_csv(path_vistante, low_memory=False)
 
     # df_local = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Local.csv'), low_memory=False)
     # df_visitante = pd.read_csv(os.path.join(r'C:\Users\Propietario\Desktop\ib\5-Maestría\Intro Python\Ejercicios\Final\Futbol_Codificado\Futbol_Codificado\data\Visitante.csv'), low_memory=False)

@@ -25,12 +25,16 @@ def VideoRef(t1 : float, t2: float) -> None:
     t2 = t2 * 60
 
     # Chequeamos que t1 < t2 y que ninguno de los dos supere el máximo tiempo del partido.
-    if t1 > t2 or t1 > df_local["Tiempo [s]"].max() or t2 > df_local["Tiempo [s]"].max():
-        raise ValueError("t1 debe ser menor que t2 y ambos deben ser tiempos validos del partido en segundos")
-    if t1 < 0:
-        raise ValueError("t1 debe ser mayor que 0")
-    if t2 < 0:
-        raise ValueError("t2 debe ser mayor que 0")
+    try :
+        if t1 > t2 or t1 > df_local["Tiempo [s]"].max() or t2 > df_local["Tiempo [s]"].max():
+            raise ValueError("t1 debe ser menor que t2 y ambos deben ser tiempos validos del partido en minutos (0 a 95)")
+        if t1 < 0:
+            raise ValueError("t1 debe ser mayor que 0")
+        if t2 < 0:
+            raise ValueError("t2 debe ser mayor que 0")
+    except ValueError as e:
+        print(e)
+        return
     
     # Tomamos los cuadros mas cercanos a estos dos tiempos para poder hacer la animación.
     cuadro_inicial = df_local["Cuadro"][abs(df_local["Tiempo [s]"] - t1).idxmin()]
