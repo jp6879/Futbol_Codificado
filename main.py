@@ -8,36 +8,36 @@ from graficos.heatmap import heatmap
 from graficos.draw_field import draw_field
 
 if __name__ == "__main__":
-    # titulo = "Graficamos el campo de juego"
-    # n = int(60-len(titulo)//2)
-    # print("*"*n + titulo + "*"*n)
-    # fig, ax = draw_field()
-    # plt.show()
+    titulo = "Graficamos el campo de juego"
+    n = int(60-len(titulo)//2)
+    print("*"*n + titulo + "*"*n)
+    fig, ax = draw_field()
+    plt.show()
 
-    # print("")
+    print("")
 
-    # titulo = "Ingrese dos tiempos en minutos para graficar una animación del partido"
-    # n = int(60-len(titulo)//2)
-    # print("*"*n + titulo + "*"*n)
-    # tiempo_inicial = float(input("Tiempo inicial: "))
-    # tiempo_final = float(input("Tiempo final: "))
-    # VideoRef(tiempo_inicial, tiempo_final)
+    titulo = "Ingrese dos tiempos en minutos para graficar una animación del partido"
+    n = int(60-len(titulo)//2)
+    print("*"*n + titulo + "*"*n)
+    tiempo_inicial = float(input("Tiempo inicial: "))
+    tiempo_final = float(input("Tiempo final: "))
+    VideoRef(tiempo_inicial, tiempo_final)
     
-    # print("")
+    print("")
 
-    # titulo = "Graficamos el mapa de calor de un jugador"
-    # n = int(60-len(titulo)//2)
-    # print("*"*n + titulo + "*"*n)
-    # print("Ingrese el número de un jugador entre 1 y 28")
+    titulo = "Graficamos el mapa de calor de un jugador"
+    n = int(60-len(titulo)//2)
+    print("*"*n + titulo + "*"*n)
+    print("Ingrese el número de un jugador entre 1 y 28")
     
-    # try:
-    #     int_jugador = int(input("Número de jugador: "))
-    #     jugador = "Jugador" + str(int_jugador)
-    #     heatmap(jugador)
-    # except ValueError:
-    #     print("El numero del jugador debe ser un entero entre 1 y 28")
+    try:
+        int_jugador = int(input("Número de jugador: "))
+        jugador = "Jugador" + str(int_jugador)
+        heatmap(jugador)
+    except ValueError:
+        print("El numero del jugador debe ser un entero entre 1 y 28")
     
-    # print("")
+    print("")
 
     titulo = "Calculamos el jugador más veloz del partido"
     n = int(60-len(titulo)//2)
