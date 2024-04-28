@@ -31,4 +31,4 @@ def tiempo_neto() -> tuple[float, float]:
     tiempo_jugado = diferencias[0:len(diferencias):2].sum()
     tiempo_no_jugado = diferencias[1:len(diferencias):2].sum()
 
-    return tiempo_jugado/60, tiempo_no_jugado/60
+    return round(tiempo_jugado/60, 0), round(tiempo_no_jugado/60, 0)
